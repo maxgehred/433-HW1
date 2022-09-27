@@ -65,6 +65,7 @@ ggplot(aes(x= ,y=)) + geom_point()
 ``` r
 plot = flights %>% group_by(month, day) %>% mutate(porp_cancel = sum(is.na(dep_time) / n())) %>% filter(is.na(dep_time) == FALSE) %>% mutate(avg_dep_delay = mean(dep_delay)) %>% ggplot(aes(x=avg_dep_delay ,y=porp_cancel)) + geom_point()
 ```
+![image](https://user-images.githubusercontent.com/113466747/192576256-87d36293-651e-425b-adce-4249db51c12c.png)
 
 ![](HW-1_files/figure-gfm/avg_delay%20v%20porp_cancel-1.png)<!-- -->
 
